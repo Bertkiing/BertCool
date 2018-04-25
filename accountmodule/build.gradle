@@ -32,15 +32,15 @@ android {
     //Solution: Manifest -> manifest
     //Link:https://blog.csdn.net/lx6101989/article/details/76198693
 
-//    sourceSets {
-//        main {
-//            if (isBuildModule.toBoolean()) {
-//                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
-//            } else {
-//                manifest.srcFile 'src/main/release/AndroidManifest.xml'
-//            }
-//        }
-//    }
+    sourceSets {
+        main {
+            if (isBuildModule.toBoolean()) {
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/release/AndroidManifest.xml'
+            }
+        }
+    }
 
 }
 
