@@ -30,7 +30,10 @@ dependencies {
     if (isBuildModule.toBoolean()) {
 
     } else {
-        compile project(':accountmodule')
     }
+
+    compile project(':commonlibrary')
+
+
 
 }

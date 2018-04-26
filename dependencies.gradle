@@ -21,6 +21,7 @@ ext {
 
     def vButterKnife = '8.8.1'
 
+    def vTimber = '4.7.0'
 
     def libs = [
             // glide 图片加载框架
@@ -40,7 +41,10 @@ ext {
 
             // ARounter 跳转框架
             arouterApi         : [group: "com.alibaba", name: 'arouter-api', version: vARouter],
-            arouterCompiler    : [group: "com.alibaba", name: 'arouter-compiler', version: vARouterCompiler]
+            arouterCompiler    : [group: "com.alibaba", name: 'arouter-compiler', version: vARouterCompiler],
+
+            // Log框架            implementation ':timber:4.7.0'
+            timber :[group:"com.jakewharton.timber",name:'timber',version:vTimber]
     ]
 
     comDependencies = [
@@ -60,6 +64,9 @@ ext {
             [configuration: 'implementation', dependency: libs.arouterApi],
             [configuration: 'annotationProcessor', dependency: libs.arouterCompiler],
 //            WARNING: Configuration 'compile' is obsolete and has been replaced with 'implementation' and 'api'.
+
+            // Log框架
+            [configuration: 'implementation', dependency: libs.timber]
 
 
     ]
